@@ -219,7 +219,7 @@ const StyledTableRow = withStyles((theme) => ({
 					<StyledTableCell>Student Name</StyledTableCell>
 
 					<StyledTableCell>Citizenship</StyledTableCell>
-					<StyledTableCell>Course</StyledTableCell>
+					<StyledTableCell>Student Regsitration Date</StyledTableCell>
 					<StyledTableCell>Application Status</StyledTableCell>
 					<StyledTableCell></StyledTableCell>
 					
@@ -233,7 +233,7 @@ const StyledTableRow = withStyles((theme) => ({
 							<StyledTableCell component="th" scope="row">{detail.studentName}</StyledTableCell>
 
 							<StyledTableCell component="th" scope="row">{detail.citizenship}</StyledTableCell>
-							<StyledTableCell component="th" scope="row">{detail.studentCourse}</StyledTableCell>
+							<StyledTableCell component="th" scope="row">{detail.date}</StyledTableCell>
 							<StyledTableCell component="th" scope="row"> {detail.applicationStatus}</StyledTableCell>
 							<StyledTableCell component="th" scope="row">
 								<a

@@ -83,7 +83,7 @@ const EditStudent = (props) => {
 		setStudentPhone(studentPhone);
 		setStudentCity(studentCity);
 		setCountry(country);
-		setDateOfApplication(dateOfApplication);
+	
 		setDateOfBirth(dateOfBirth);
 		setShortlistedUniversity(shortlistedUniversity);
 
@@ -104,7 +104,7 @@ const EditStudent = (props) => {
 					studentCity: studentCity,
 					studentPhone: studentPhone,
 					country: country,
-					dateOfApplication: dateOfApplication,
+					//dateOfApplication: dateOfApplication,
 					dateOfBirth: dateOfBirth,
 					shortlistedUniversity: shortlistedUniversity,
 				});
@@ -219,7 +219,8 @@ const EditStudent = (props) => {
 
 			// 	}
 		} catch (error) {
-			alert(error);
+			console.log(error);
+			alert('Please fill in all the details')
 		}
 
 		history.push("/dashboard");

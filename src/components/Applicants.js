@@ -210,7 +210,7 @@ const StyledTableRow = withStyles((theme) => ({
 					<StyledTableCell>Student Email</StyledTableCell>
 					<StyledTableCell>Student Phone</StyledTableCell>
 					<StyledTableCell>Citizenship</StyledTableCell>
-					<StyledTableCell>Course</StyledTableCell>
+					<StyledTableCell>Date of Creation</StyledTableCell>
 					<StyledTableCell>Application Status</StyledTableCell>
 					<StyledTableCell>View</StyledTableCell>
 					<StyledTableCell></StyledTableCell>
@@ -226,7 +226,7 @@ const StyledTableRow = withStyles((theme) => ({
 							 <StyledTableCell align="right">{detail.studentEmail}</StyledTableCell>
 							 <StyledTableCell align="right">{detail.studentPhone}</StyledTableCell>
 							 <StyledTableCell align="right"> {detail.citizenship}</StyledTableCell>
-							 <StyledTableCell align="right">{detail.studentCourse}</StyledTableCell>
+							 <StyledTableCell align="right">{detail.date}</StyledTableCell>
 							 <StyledTableCell align="right">{detail.applicationStatus}</StyledTableCell>
 							 <StyledTableCell align="right">
 								<a

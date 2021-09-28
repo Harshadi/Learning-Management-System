@@ -30,6 +30,7 @@ function AddUser() {
 	const [email, setEmail] = useState([]);
 	const [number, setNumber] = useState([]);
 	var repeatStatus = false;
+	const [date, setDate] = useState('');
 
 	useEffect(() => {
 		console.log("inside useeffect");
@@ -71,6 +72,7 @@ function AddUser() {
 		setDateOfBirth(dateOfBirth);
 		setCitizenship(citizenship);
 		setGender(gender);
+		setDate(Date().toLocaleString())
 
 		try {
 			const db = firebaseConfig.firestore();
@@ -119,7 +121,8 @@ function AddUser() {
 						studentPhone: studentPhone,
 						dateOfBirth: dateOfBirth,
 						citizenship: citizenship,
-						applicationStatus: "Incomplete"
+						applicationStatus: "Incomplete",
+						date: date
 					});
 
 				setCurrentStudent(currentStudent);
@@ -245,7 +248,9 @@ function AddUser() {
 											placeholder="Student Name"
 											studentName={studentName}
 											value={studentName}
-											onChange={(e) => setStudentName(e.target.value)}
+											onChange={(e) =>{ setStudentName(e.target.value)
+											setDate(Date().toLocaleString())
+											console.log(date)}}
 											required
 										/>
 										<br />

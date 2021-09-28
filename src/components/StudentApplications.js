@@ -247,6 +247,7 @@ const StyledTableRow = withStyles((theme) => ({
 					<StyledTableCell>Citizenship</StyledTableCell>
 					<StyledTableCell>Course</StyledTableCell>
 					<StyledTableCell>Application Status</StyledTableCell>
+					<StyledTableCell>Application Created</StyledTableCell>
 					<StyledTableCell>Edit</StyledTableCell>
 				 </TableRow>
         </TableHead>
@@ -258,6 +259,7 @@ const StyledTableRow = withStyles((theme) => ({
 							<StyledTableCell align="right">{detail.birthCountry}</StyledTableCell>
 								<StyledTableCell align="right"> {detail.programName}</StyledTableCell>
 								<StyledTableCell align="right"> {doc.applicationStatus}</StyledTableCell>
+								<StyledTableCell align="right"> {doc.date}</StyledTableCell>
 								<StyledTableCell align="right">
 								<EditIcon
 									className="editIcon"

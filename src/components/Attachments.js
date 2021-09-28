@@ -44,7 +44,8 @@ const Attachments = (props) => {
   const [imageAsFile, setImageAsFile] = useState("");
   const [imageAsUrl, setImageAsUrl] = useState("");
   const [urls, setUrls] = useState("");  
-  const [ files, setFiles]= useState([])
+  const [ files, setFiles]= useState([]);
+  const [date, setDate] = useState('');
   
   useEffect(() => {
     const details = [];
@@ -149,12 +150,15 @@ const fetchImages = async () => {
 
   console.log(imageAsFile);
   const handleImageAsFile = (e) => {
+    setDate(Date().toLocaleString())
     const image = e.target.files[0];
     setImageAsFile((imageFile) => image);
     console.log("run", imageAsFile);
   };
 
   const handleFireBaseUpload = async(e) => {
+
+	setDate(Date().toLocaleString())
     e.preventDefault();
     console.log("start of upload");
     // async magic goes here...
@@ -203,6 +207,7 @@ const fetchImages = async () => {
           type: imageAsFile.type,
           size: imageAsFile.size,
           lastModifiedDate: imageAsFile.lastModifiedDate,
+	  date: date
         });
           });
       }
@@ -364,6 +369,7 @@ const fetchImages = async () => {
               <StyledTableCell>File Name</StyledTableCell>
               <StyledTableCell>Category</StyledTableCell>
               <StyledTableCell>View</StyledTableCell>
+		<StyledTableCell>File Uploaded at</StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -381,6 +387,9 @@ const fetchImages = async () => {
                 </StyledTableCell>
                 <StyledTableCell component="th" scope="row">
                   <img src={detail.adimage} alt="" />
+                </StyledTableCell>
+		 <StyledTableCell component="th" scope="row">
+                  {detail.date}
                 </StyledTableCell>
               </StyledTableRow>
             ))}
